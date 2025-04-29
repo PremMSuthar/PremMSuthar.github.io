@@ -39,14 +39,61 @@
 
 ---
 
-### 📫 Contact Me
-- 📧 **Email:** [premsutharm@gmail.com](mailto:premsutharm@gmail.com)  
-- 📱 **Phone:** +91 82008 54401  
-- 💼 **LinkedIn:** [Prem Suthar](https://www.linkedin.com/in/prem-suthar-74b70513b/)  
-- 🌐 **Drupal.org:** [prem-suthar](https://www.drupal.org/u/prem-suthar)  
-- 🗨️ **Drupal StackExchange:** [Profile](https://drupal.stackexchange.com/users/116830/prem-suthar)  
-- 🧑‍🤝‍🧑 **Drupal Community Social:** [@premsuthar](https://drupal.community/@premsuthar)  
-- 🌍 **WordPress Profile:** [WordPress.org](https://profiles.wordpress.org/premsutharm/)
+### 🛠️ Languages & Tools
+
+<p align="left">
+  <img src="https://img.shields.io/badge/-HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
+  <img src="https://img.shields.io/badge/-CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
+  <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/-PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP"/>
+  <img src="https://img.shields.io/badge/-MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
+  <img src="https://img.shields.io/badge/-WordPress-21759B?style=for-the-badge&logo=wordpress&logoColor=white" alt="WordPress"/>
+  <img src="https://img.shields.io/badge/-Drupal-0678BE?style=for-the-badge&logo=drupal&logoColor=white" alt="Drupal"/>
+  <img src="https://img.shields.io/badge/-Symfony-000000?style=for-the-badge&logo=symfony&logoColor=white" alt="Symfony"/>
+  <img src="https://img.shields.io/badge/-Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"/>
+  <img src="https://img.shields.io/badge/-Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind"/>
+  <img src="https://img.shields.io/badge/-Composer-2C6B60?style=for-the-badge&logo=composer&logoColor=white" alt="Composer"/>
+  <img src="https://img.shields.io/badge/-Drush-009C9D?style=for-the-badge&logo=drush&logoColor=white" alt="Drush"/>
+  <img src="https://img.shields.io/badge/-Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
+  <img src="https://img.shields.io/badge/-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
+  <img src="https://img.shields.io/badge/-Lando-0061F2?style=for-the-badge&logo=lando&logoColor=white" alt="Lando"/>
+  <img src="https://img.shields.io/badge/-Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes"/>
+  <img src="https://img.shields.io/badge/-GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="GitHub Actions"/>
+  <img src="https://img.shields.io/badge/-GitLab%20CI-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white" alt="GitLab CI"/>
+  <img src="https://img.shields.io/badge/-Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu"/>
+  <img src="https://img.shields.io/badge/-Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white" alt="Nginx"/>
+  <img src="https://img.shields.io/badge/-Apache-D22128?style=for-the-badge&logo=apache&logoColor=white" alt="Apache"/>
+  <img src="https://img.shields.io/badge/-DDEV-0A2B4E?style=for-the-badge&logo=ddev&logoColor=white" alt="DDEV"/>
+  <img src="https://img.shields.io/badge/-Solr-9E2A2A?style=for-the-badge&logo=apache-solr&logoColor=white" alt="Solr"/>
+</p>
+
+---
+
+### 📫 Connect With Me
+
+<p align="left">
+  <a href="mailto:premsutharm@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Badge"/>
+  </a>
+  <a href="https://www.linkedin.com/in/prem-suthar-74b70513b/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
+  </a>
+  <a href="https://www.drupal.org/u/prem-suthar" target="_blank">
+    <img src="https://img.shields.io/badge/Drupal-0678BE?style=for-the-badge&logo=drupal&logoColor=white" alt="Drupal Badge"/>
+  </a>
+  <a href="https://drupal.stackexchange.com/users/116830/prem-suthar" target="_blank">
+    <img src="https://img.shields.io/badge/Drupal%20StackExchange-FE7A16?style=for-the-badge&logo=stackexchange&logoColor=white" alt="Drupal StackExchange Badge"/>
+  </a>
+  <a href="https://drupal.community/@premsuthar" target="_blank">
+    <img src="https://img.shields.io/badge/Drupal%20Social-29ABE2?style=for-the-badge&logo=drupal&logoColor=white" alt="Drupal Community Badge"/>
+  </a>
+  <a href="https://profiles.wordpress.org/premsutharm/" target="_blank">
+    <img src="https://img.shields.io/badge/WordPress-21759B?style=for-the-badge&logo=wordpress&logoColor=white" alt="WordPress Badge"/>
+  </a>
+  <a href="https://www.instagram.com/prem_suthar_1999?igsh=YWgwN2F6bzAxMmdk" target="_blank">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram Badge"/>
+  </a>
+</p>
 
 ---
 
