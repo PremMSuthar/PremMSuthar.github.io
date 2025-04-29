@@ -8,7 +8,7 @@
 ---
 
 ### 🧠 Bio
-🚀 Full-stack developer with nearly **4 years of hands-on experience** in building, optimizing, and maintaining powerful **Drupal** and **WordPress** websites.  
+🚀 Full-stack developer with nearly **5 years of hands-on experience** in building, optimizing, and maintaining powerful **Drupal** and **WordPress** websites.  
 💡 Passionate about **open-source contributions**, DevOps integration, and creating fast, secure, and scalable web applications.  
 🛠️ Actively contributing to Drupal & WordPress ecosystems.  
 💼 Ensuring **peace of mind** for site owners through quality code, smart architecture, and continuous improvement.
