@@ -2960,13 +2960,39 @@ body::before {
     background: rgba(var(--accent-rgb), 0.1);
 }
 
-.contact-card-small .card-icon {
-    font-size: 1.2rem;
+/* Contact card Font Awesome icons */
+.contact-card-small .fas,
+.contact-card-small .fab {
+    font-size: 1.8rem;
     transition: transform 0.3s ease;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.contact-card-small:hover .card-icon {
+.contact-card-small:hover .fas,
+.contact-card-small:hover .fab {
     transform: scale(1.1) translateZ(10px);
+}
+
+/* Contact card specific gradients */
+.contact-card-small[data-type="email"] .fas {
+    background: linear-gradient(135deg, #EA4335 0%, #FBBC05 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-card-small[data-type="linkedin"] .fab {
+    background: linear-gradient(135deg, #0077B5 0%, #00A0DC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-card-small[data-type="drupal"] .fab {
+    background: linear-gradient(135deg, #0678BE 0%, #29ABE2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .contact-card-small .card-content {
@@ -3494,7 +3520,7 @@ body::before {
     z-index: 1000;
 }
 
-.fab {
+.floating-btn {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -3516,9 +3542,65 @@ body::before {
     user-select: none;
 }
 
-.fab:active {
+.floating-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    border-color: var(--primary);
+    box-shadow: 0 15px 35px rgba(0, 212, 255, 0.3);
+    color: var(--primary);
+}
+
+.floating-btn svg {
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.floating-btn:hover svg {
+    transform: scale(1.1);
+}
+
+.floating-btn .fab-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: -1;
+}
+
+.floating-btn:hover .fab-bg {
+    transform: scale(1);
+}
+
+.floating-btn:hover {
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 15px 35px rgba(0, 212, 255, 0.4);
+    color: var(--bg-dark);
+    border-color: var(--primary);
+}
+
+.floating-btn:active {
+    transform: translateY(-2px) scale(1.05);
+}
+
+.floating-btn:active {
     cursor: grabbing;
 }
+
+.floating-btn.dragging {
+    z-index: 1001;
+    transform: scale(1.1);
+    animation: none;
+    position: fixed !important;
+}
+
+
+
+
 
 .fab.dragging {
     z-index: 1001;
@@ -3529,9 +3611,7 @@ body::before {
     bottom: auto !important;
 }
 
-.fab:nth-child(1) { animation-delay: 0.1s; }
-.fab:nth-child(2) { animation-delay: 0.2s; }
-.fab:nth-child(3) { animation-delay: 0.3s; }
+
 
 @keyframes fabSlideIn {
     to {
@@ -3553,20 +3633,7 @@ body::before {
     z-index: -1;
 }
 
-.fab:hover .fab-bg {
-    transform: scale(1);
-}
 
-.fab:hover {
-    transform: translateY(-4px) scale(1.1);
-    box-shadow: 0 15px 35px rgba(0, 212, 255, 0.4);
-    color: var(--bg-dark);
-    border-color: var(--primary);
-}
-
-.fab:active {
-    transform: translateY(-2px) scale(1.05);
-}
 
 /* Back to top specific styling */
 .back-to-top {
@@ -3619,7 +3686,7 @@ body::before {
         bottom: 1rem;
     }
     
-    .fab {
+    .floating-btn {
         width: 50px;
         height: 50px;
     }
@@ -3684,58 +3751,7 @@ body::before {
     pointer-events: none;
 }
 
-.tech-float {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    animation-fill-mode: both;
-}
 
-.tech-float img {
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.3));
-}
-
-.tech-float:hover {
-    transform: scale(1.3) rotate(5deg);
-    z-index: 10;
-    animation: bounce 0.6s ease-in-out;
-}
-
-.tech-float:hover img {
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-    filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.6)) brightness(1.1);
-}
-
-/* Enhanced random positioning and animations */
-.tech-float:nth-child(1) { top: 10%; left: 15%; animation: float1 8s ease-in-out infinite, glow1 3s ease-in-out infinite alternate; }
-.tech-float:nth-child(2) { top: 20%; left: 70%; animation: float2 9s ease-in-out infinite, glow2 3.5s ease-in-out infinite alternate; }
-.tech-float:nth-child(3) { top: 35%; left: 25%; animation: float3 7s ease-in-out infinite, glow3 4s ease-in-out infinite alternate; }
-.tech-float:nth-child(4) { top: 15%; left: 45%; animation: float4 10s ease-in-out infinite, glow4 2.8s ease-in-out infinite alternate; }
-.tech-float:nth-child(5) { top: 50%; left: 80%; animation: float5 8.5s ease-in-out infinite, glow5 3.2s ease-in-out infinite alternate; }
-.tech-float:nth-child(6) { top: 45%; left: 10%; animation: float6 9.5s ease-in-out infinite, glow6 4.2s ease-in-out infinite alternate; }
-.tech-float:nth-child(7) { top: 65%; left: 60%; animation: float7 7.5s ease-in-out infinite, glow7 3.8s ease-in-out infinite alternate; }
-.tech-float:nth-child(8) { top: 30%; left: 85%; animation: float8 8.8s ease-in-out infinite, glow8 2.5s ease-in-out infinite alternate; }
-.tech-float:nth-child(9) { top: 75%; left: 20%; animation: float9 9.2s ease-in-out infinite, glow9 3.6s ease-in-out infinite alternate; }
-.tech-float:nth-child(10) { top: 60%; left: 40%; animation: float10 8.3s ease-in-out infinite, glow10 4.5s ease-in-out infinite alternate; }
-.tech-float:nth-child(11) { top: 80%; left: 75%; animation: float11 7.8s ease-in-out infinite, glow11 2.9s ease-in-out infinite alternate; }
-.tech-float:nth-child(12) { top: 25%; left: 5%; animation: float12 9.8s ease-in-out infinite, glow12 3.4s ease-in-out infinite alternate; }
-.tech-float:nth-child(13) { top: 40%; left: 55%; animation: float13 8.1s ease-in-out infinite, glow13 4.1s ease-in-out infinite alternate; }
-.tech-float:nth-child(14) { top: 85%; left: 45%; animation: float14 9.4s ease-in-out infinite, glow14 2.7s ease-in-out infinite alternate; }
-.tech-float:nth-child(15) { top: 5%; left: 30%; animation: float15 8.7s ease-in-out infinite, glow15 3.9s ease-in-out infinite alternate; }
-.tech-float:nth-child(16) { top: 55%; left: 5%; animation: float16 7.3s ease-in-out infinite, glow16 4.3s ease-in-out infinite alternate; }
-.tech-float:nth-child(17) { top: 70%; left: 85%; animation: float17 9.1s ease-in-out infinite, glow17 2.6s ease-in-out infinite alternate; }
-.tech-float:nth-child(18) { top: 90%; left: 15%; animation: float18 8.4s ease-in-out infinite, glow18 3.7s ease-in-out infinite alternate; }
-.tech-float:nth-child(19) { top: 12%; left: 60%; animation: float19 7.9s ease-in-out infinite, glow19 4.4s ease-in-out infinite alternate; }
-.tech-float:nth-child(20) { top: 48%; left: 30%; animation: float20 9.6s ease-in-out infinite, glow20 3.1s ease-in-out infinite alternate; }
-.tech-float:nth-child(21) { top: 33%; left: 75%; animation: float21 8.2s ease-in-out infinite, glow21 2.4s ease-in-out infinite alternate; }
-.tech-float:nth-child(22) { top: 78%; left: 55%; animation: float22 7.6s ease-in-out infinite, glow22 4.6s ease-in-out infinite alternate; }
 
 /* Enhanced animations */
 @keyframes canvasGlow {
@@ -4071,3 +4087,79 @@ body::before {
 
 @keyframes float23 { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-18px) rotate(3deg); } }
 @keyframes glow23 { 0% { filter: drop-shadow(0 0 5px rgba(0, 150, 136, 0.3)); } 100% { filter: drop-shadow(0 0 15px rgba(0, 150, 136, 0.6)); } }
+/* Font Awesome Gradient Icons - Exclude button icons */
+.card-icon i, .stat-icon i, .contact-icon i, .value-icon i {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: all 0.3s ease;
+}
+
+/* Tech stack specific gradients */
+.tech-card[data-tech="drupal"] .card-icon i {
+    background: linear-gradient(135deg, #0678BE 0%, #29ABE2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tech-card[data-tech="php"] .card-icon i {
+    background: linear-gradient(135deg, #777BB4 0%, #8892BF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tech-card[data-tech="ai"] .card-icon i {
+    background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Contact card specific gradients */
+.contact-card-small[data-type="email"] .card-icon i {
+    background: linear-gradient(135deg, #EA4335 0%, #FBBC05 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-card-small[data-type="linkedin"] .card-icon i {
+    background: linear-gradient(135deg, #0077B5 0%, #00A0DC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-card-small[data-type="drupal"] .card-icon i {
+    background: linear-gradient(135deg, #0678BE 0%, #29ABE2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hover effects */
+.card-icon:hover i, .stat-icon:hover i, .contact-icon:hover i {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* Reset button icons to normal display */
+.btn-icon svg, .btn-icon i {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
+    background-clip: unset !important;
+    width: 16px !important;
+    height: 16px !important;
+    display: inline-block !important;
+}
+
+/* Override Font Awesome display property */
+.btn-icon i {
+    display: none !important;
+}
+
+/* Ensure button content displays properly */
+.btn-content .btn-icon svg {
+    width: 16px !important;
+    height: 16px !important;
+    stroke: currentColor !important;
+    fill: none !important;
+}
